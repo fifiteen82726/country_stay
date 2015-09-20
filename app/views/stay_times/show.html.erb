@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Arrive date:</strong>
+  <%= @stay_time.arrive_date %>
+</p>
+
+<p>
+  <strong>Leave date:</strong>
+  <%= @stay_time.leave_date %>
+</p>
+
+<p>
+  <strong>Nationality:</strong>
+  <%= @stay_time.nationality %>
+</p>
+
+<p>
+  <strong>Country stay:</strong>
+  <%= @stay_time.country_stay %>
+</p>
+
+<p>
+  <strong>Day stay:</strong>
+  <%= @stay_time.day_stay %>
+</p>
+
+<%= link_to 'Edit', edit_stay_time_path(@stay_time) %> |
+<%= link_to 'Back', stay_times_path %>

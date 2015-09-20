@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  arrive_date: 2015-09-20
+  leave_date: 2015-09-20
+  nationality: MyString
+  country_stay: MyString
+  day_stay: 
+
+two:
+  arrive_date: 2015-09-20
+  leave_date: 2015-09-20
+  nationality: MyString
+  country_stay: MyString
+  day_stay: 

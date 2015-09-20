@@ -1,0 +1,136 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="jumbotron">
+            <h2>
+              Hello, world!
+            </h2>
+            <p>
+              For computing date 
+            </p>
+            <p>
+              <a class="btn btn-primary btn-large" href="#">Learn more</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-4">
+            
+             
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+          </div> <a href="#" class="btn btn-primary" type="button">Button</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>
+                  #
+                </th>
+                <th>
+                  Name
+                </th>
+
+                <th>
+                  Nationality 
+                </th>
+                <th>
+                  Country
+                </th>
+                <th>
+                  Arrive Date
+                </th>
+
+                <th>
+                  Stay day
+                </th>
+
+                <th>
+                  Leave Date
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @stay_times.each do |s| %>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                 <%= s.name %>
+                </td>
+                <td>
+                 <%= s.nationality %>
+                </td>
+                <td>
+                 <%= s.country_stay %> 
+                </td>
+
+                <td>
+                 <%= s.arrive_date %> 
+                </td>
+
+                <td>
+                 <%= s.day_stay %> 
+                </td>
+
+                 <td>
+                 <%= s.leave_date %> 
+                </td>
+
+              </tr>
+              <% end %>
+             
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Arrive date</th>
+      <th>Leave date</th>
+      <th>Nationality</th>
+      <th>Country stay</th>
+      <th>Day stay</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stay_times.each do |stay_time| %>
+      <tr>
+        <td><%= stay_time.arrive_date %></td>
+        <td><%= stay_time.leave_date %></td>
+        <td><%= stay_time.nationality %></td>
+        <td><%= stay_time.country_stay %></td>
+        <td><%= stay_time.day_stay %></td>
+        <td><%= link_to 'Show', stay_time %></td>
+        <td><%= link_to 'Edit', edit_stay_time_path(stay_time) %></td>
+        <td><%= link_to 'Destroy', stay_time, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stay time', new_stay_time_path %>

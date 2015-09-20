@@ -1,0 +1,40 @@
+<%= form_for(@stay_time) do |f| %>
+  <% if @stay_time.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stay_time.errors.count, "error") %> prohibited this stay_time from being saved:</h2>
+
+      <ul>
+      <% @stay_time.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :arrive_date %><br>
+    <%= f.date_select :arrive_date %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :nationality %><br>
+    <%= f.text_field :nationality %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country_stay %><br>
+    <%= f.text_field :country_stay %>
+  </div>
+  <div class="field">
+    <%= f.label :day_stay %><br>
+    <%= f.text_field :day_stay %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
